@@ -1,0 +1,111 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+.container {
+  background: #FFF;
+  position: fixed;
+  z-index: 210000;
+  top: 0;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+
+  @include mobile {
+    position: static;
+    margin-bottom: -40px;
+  }
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  max-height: 40px;
+  max-width: 40px;
+  margin: auto 0 auto 16px;
+  svg {margin-top: 4px; width: 100%; height: auto;}
+}
+
+.appbar {
+  display: flex;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.appbar_text {
+  color: rgba(0,0,0,0.87);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0 8px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: 8px 24px 8px auto;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  background: $rb-app-color;
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  a {width: 100%; height: auto;}
+  svg {display:none;}
+  @media (max-width: #{450px}) {
+    background: #FFF;
+      height: 100%;
+      width: 100%;
+      max-height: 20px;
+      max-width: 20px;
+      margin-right: 8px;
+    svg {
+      display:block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.icon:hover {
+  background: darken($rb-app-color, 10%);
+  @media (max-width: #{450px}) {
+    background: #fff;
+  }
+}
+
+.icon_text {
+  color: white;
+  @media (max-width: #{450px}) {
+    display: none;
+  }
+}
+
+.icon_text:hover {
+  color: white;
+}
+
+.selector {
+  display: flex;
+  margin-left: 16px;
+}
+
+.item,
+.item--selected {
+  margin-right: 24px;
+  padding-bottom: 8px;
+  color: rgba(0,0,0,0.7);
+}
+
+.item--selected{
+  border-bottom: 2px solid #3498DB;
+}
+
+.item_text,
+.item_text--selected {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.item_text--selected {
+  color: #3498DB;
+}

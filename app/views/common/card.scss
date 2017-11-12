@@ -1,0 +1,79 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+.card {
+  display: block;
+  @include fullView;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12), 0 -1px 3px 0 rgba(0,0,0,0.12);
+}
+
+.item_image {
+  height: 200px;
+  width: 21vw;
+  @media (max-width: #{900px}) {
+   width: 28vw;
+  }
+  @media (max-width: #{640px}) {
+    width: 42vw;
+  }
+  @media (max-width: #{472px}) {
+    width: 100%;
+  }
+}
+
+.payment {
+  padding-top: 8px;
+  background-color: white;
+  width: 21vw;
+  @media (max-width: #{900px}) {
+   width: 28vw;
+  }
+  @media (max-width: #{640px}) {
+    width: 42vw;
+  }
+  @media (max-width: #{472px}) {
+    width: 100%;
+  }
+}
+
+.payment_info {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.price_amt,
+.item_title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #484848;
+}
+
+.price_amt {
+  padding-left: 12px;
+}
+
+.item_title {
+  font-weight: 300;
+  margin-left: 8px !important;
+}
+
+.auction_num_peeps {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 4px !important;
+  margin-left: 12px !important;
+  margin-bottom: 8px !important;
+}
+
+.card_icon {
+  height: 100%;
+  width: 100%;
+  max-height: 16px;
+  max-width: 16px;
+  svg {width: 100%; height: auto;}
+}
+
+.payment_profile {
+  display: flex;
+  padding-left: 12px;
+}

@@ -1,0 +1,19 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+.container {
+  @include fullView
+}
+
+.nav_title {
+  flex: 1;
+  color: rgba(0,0,0,0.87);
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+
+
+.winning-bid-modal {
+  max-height: 50px;
+}

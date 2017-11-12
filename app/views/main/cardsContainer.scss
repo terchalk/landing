@@ -1,0 +1,48 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+.arrow,
+.arrow_back {
+  background-color: #fff;
+  cursor: pointer;
+  margin-top: 4px;
+  height: 100%;
+  width: 100%;
+  max-height: 32px;
+  max-width: 32px;
+  position: absolute;
+  border: 1px solid #d5d5d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 50;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.arrow:hover,
+.arrow_back:hover {
+  background-color: darken(#FFF, 10%);
+}
+
+.arrow_back {
+  left: -16px;
+  top: 50%;
+}
+
+.arrow {
+  right: -16px;
+  top: 50%;
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.container {
+}
